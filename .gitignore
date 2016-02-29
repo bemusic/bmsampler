@@ -14,3 +14,8 @@ Icon
 .Spotlight-V100
 .Trashes
 
+Makefile
+*.Makefile
+*.mk
+gyp-mac-tool
+/out/
