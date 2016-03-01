@@ -6,6 +6,6 @@ test:
   pre:
     - 'wget https://www.dropbox.com/s/xvubocnzedxks0u/libsndfile-1.0.26-w64.zip?dl=1 -Olibsndfile-1.0.26-w64.zip'
     - 'unzip libsndfile-1.0.26-w64.zip'
-    - 'x86_64-w64-mingw32-g++ bmsampler.cpp -Ilibsndfile-1.0.26-w64 -std=c++11 -Llibsndfile-1.0.26-w64 -static-libgcc -static-libstdc++ -Wl,-Bstatic -lstdc++ -lpthread -Wl,-Bdynamic -lsndfile-1'
+    - 'x86_64-w64-mingw32-g++ bmsampler.cpp -Ilibsndfile-1.0.26-w64 -std=c++11 -Llibsndfile-1.0.26-w64 -static-libgcc -static-libstdc++ -Wl,-Bstatic -lstdc++ -lpthread -Wl,-Bdynamic -lsndfile-1 -o bmsampler.exe'
   override:
     - true
