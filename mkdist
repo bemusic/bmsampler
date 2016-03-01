@@ -3,4 +3,4 @@
 VERSION=$(./bmsampler -v)
 mkdir -p dist/bmsampler-$VERSION
 cp bmsampler.exe vendor/libsndfile/lib/libsndfile-1.dll dist/bmsampler-$VERSION
-(cd dist && zip -r "$CIRCLE_ARTIFACTS/bmsampler-$VERSION-w64" "bmsampler-$VERSION")
+(cd dist && zip -r "$CIRCLE_ARTIFACTS/bmsampler-$VERSION-w64.zip" "bmsampler-$VERSION")
