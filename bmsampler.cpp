@@ -150,7 +150,7 @@ int main (int argc, char* argv[]) {
 		return 1;
 	}
 	if (string(argv[1]) == "-v") {
-		cout << "v0.1.0" << endl;
+		cout << "0.2.0" << endl;
 		return 0;
 	}
 	try {
