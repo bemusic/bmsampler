@@ -8,4 +8,4 @@ test:
     - 'unzip libsndfile-1.0.26-w64.zip'
     - 'x86_64-w64-mingw32-g++ bmsampler.cpp -Ilibsndfile-1.0.26-w64 -std=c++11 -Llibsndfile-1.0.26-w64 -static-libgcc -static-libstdc++ -Wl,-Bstatic -lstdc++ -lpthread -Wl,-Bdynamic -lsndfile-1 -o bmsampler.exe'
   override:
-    - true
+    - 'true'
