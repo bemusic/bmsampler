@@ -3,7 +3,7 @@
 #include <iostream>
 #include <list>
 #include <sndfile.hh>
-#include "include/json.hpp"
+#include <json.hpp>
 #define MAX_FRAMES (44100 * 60 * 15)
 
 using json = nlohmann::json;
