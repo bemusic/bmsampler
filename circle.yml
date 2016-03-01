@@ -2,11 +2,15 @@ machine:
   services:
     - docker
 dependencies:
+  cache_directories:
+    - '~/docker'
   override:
     - docker info
+    - if [[ -e ~/docker/image.tar ]]; then docker load -i ~/docker/image.tar; fi
     - docker build -t bmsampler .
     - mkdir dist
     - docker run bmsampler cat bmsampler.exe > bmsampler.exe
+    - mkdir -p ~/docker; docker save bmsampler > ~/docker/image.tar
     - sudo apt-get install libsndfile1 libsndfile1-dev
     - g++ -std=c++11 bmsampler.cpp -I./vendor/json/include -o bmsampler
 test:
