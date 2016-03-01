@@ -1,0 +1,6 @@
+#!/bin/bash -e
+
+VERSION=$(./bmsampler -v)
+mkdir -p dist/bmsampler-$VERSION
+cp bmsampler.exe vendor/libsndfile/lib/libsndfile-1.dll dist/bmsampler-$VERSION
+(cd dist && zip -r "$CIRCLE_ARTIFACTS/bmsampler-$version" "bmsampler-$VERSION")
