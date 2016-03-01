@@ -12,7 +12,7 @@ dependencies:
     - docker run bmsampler cat bmsampler.exe > bmsampler.exe
     - mkdir -p ~/docker; docker save bmsampler > ~/docker/image.tar
     - sudo apt-get install libsndfile1 libsndfile1-dev
-    - g++ -std=c++11 bmsampler.cpp -I./vendor/json/include -o bmsampler
+    - g++ -std=c++11 bmsampler.cpp -I./vendor/json/include -lsndfile -o bmsampler
 test:
   override:
     - ./bmsampler out.wav < example.txt
