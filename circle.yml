@@ -1,7 +1,7 @@
 
 dependencies:
   override:
-    - 'sudo apt-get install mingw-w64'
+    - 'sudo apt-get install g++-mingw-w64-x86-64'
 test:
   pre:
     - 'wget https://www.dropbox.com/s/xvubocnzedxks0u/libsndfile-1.0.26-w64.zip?dl=1 -Olibsndfile-1.0.26-w64.zip'
